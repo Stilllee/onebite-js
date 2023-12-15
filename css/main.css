@@ -22,6 +22,7 @@ body {
 
 .main-container .main-wrapper {
   text-align: center;
+  position: fixed;
 }
 
 .main-wrapper .date {
@@ -65,4 +66,50 @@ body {
   margin-bottom: 20px;
   font-weight: 300;
   text-align: center;
+}
+
+.bookmark-open {
+  width: 240px;
+  padding: 15px 30px;
+  font-size: var(--xsmall);
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bookmark-close {
+  width: 240px;
+  padding: 15px 30px;
+  font-size: var(--xsmall);
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  color: black;
+}
+
+.bookmark-open div {
+  cursor: pointer;
+}
+
+.bookmark-close div {
+  cursor: pointer;
+}
+
+.bookmark-bar {
+  width: 240px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50px;
+  right: 0;
+  min-height: calc(100vh - 70px);
+  padding: 10px 30px;
+  color: white;
 }
