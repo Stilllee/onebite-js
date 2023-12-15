@@ -17,8 +17,8 @@
       "금요일",
       "토요일",
     ];
-    let month = modifyNumber(nowDate.getMonth());
-    let date = modifyNumber(nowDate.getDate() + 1);
+    let month = modifyNumber(nowDate.getMonth() + 1);
+    let date = modifyNumber(nowDate.getDate());
     let day = nowDate.getDay();
     setNowDate(month, date, week[day]);
   };
