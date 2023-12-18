@@ -11,6 +11,12 @@ body {
   margin: 0 auto;
   width: 100%;
   font-family: "Noto Sans KR", sans-serif;
+  background-image: url("https://source.unsplash.com/user/w00dstock/likes");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
 
 .main-container {
@@ -51,6 +57,9 @@ body {
   border: 0;
   text-align: center;
   margin-top: -10px;
+}
+.search #search-input:focus {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .search #search-input::placeholder {
@@ -147,6 +156,11 @@ body {
   height: 20px;
   border-radius: 5px;
   margin: 5px;
+  background-color: transparent;
+  border: rgba(241, 241, 241, 0.2) 1px solid;
+}
+.bookmark-item-input-form .bookmark-input input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .bookmark-item-input-btn {
   display: flex;
