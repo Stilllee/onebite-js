@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
   <head>
-    <title>New Tab</title>
+    <title>To Do List</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,66 +14,23 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="main-container">
-      <div class="main-wrapper">
-        <div class="today-info">
-          <div class="date" id="date">
-            <!-- 날짜&요일 -->
-          </div>
-          <div class="time" id="time">
-            <!-- 현재시간 -->
-          </div>
-        </div>
-        <div class="search">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="검색어를 입력하세요"
-            autocomplete="off"
-          />
+    <main>
+      <h1>To Do List</h1>
+      <div class="todo-input-form">
+        <input
+          type="text"
+          class="todo-input"
+          placeholder="할 일을 입력하세요"
+        />
+        <button class="add-btn">추가</button>
+      </div>
+      <div class="todo-list">
+        <div class="todo-list-item">
+          <!-- 투두리스트 -->
+          <div class="todo">해야할 일</div>
+          <button class="complete-btn">완료</button>
         </div>
       </div>
-      <div class="quote" id="quote">
-        <!-- 명언 -->
-      </div>
-    </div>
-    <div class="bookmark-open" id="bookmark-open">
-      <div id="bookmark-open-btn">북마크 닫기</div>
-    </div>
-    <div class="bookmark-close" id="bookmark-close">
-      <div id="bookmark-close-btn">북마크 열기</div>
-    </div>
-    <div class="bookmark-bar" id="bookmark-bar">
-      <!-- 북마크 바 -->
-      <div class="bookmark-item-add-btn" id="bookmark-item-add-btn">
-        + 북마크 추가
-      </div>
-      <div class="bookmark-item-input-form" id="bookmark-item-input-form">
-        <div class="bookmark-input">
-          <div class="new-bookmark-name">
-            <div class="label">이름</div>
-            <input
-              type="text"
-              id="new-bookmark-name-input"
-              autocomplete="off"
-            />
-          </div>
-          <div class="new-bookmark-url">
-            <div class="label">주소</div>
-            <input type="text" id="new-bookmark-url-input" autocomplete="off" />
-          </div>
-        </div>
-        <div class="bookmark-item-input-btn">
-          <div class="cancel-btn" id="cancel-btn">취소</div>
-          <div class="add-btn" id="add-btn">추가</div>
-        </div>
-      </div>
-      <div class="bookmark-list" id="bookmark-list"></div>
-    </div>
-    <script src="./js/clock.js"></script>
-    <script src="./js/search.js"></script>
-    <script src="./js/quote.js"></script>
-    <script src="./js/bookmark-toggle.js"></script>
-    <script src="./js/bookmark.js"></script>
+    </main>
   </body>
 </html>

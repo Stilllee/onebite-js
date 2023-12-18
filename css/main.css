@@ -1,212 +1,103 @@
 :root {
-  --xlarge: 170px;
+  /* font size */
+  --xlarge: 36px;
   --large: 28px;
   --medium: 18px;
   --small: 16px;
   --xsmall: 14px;
   --xxsmall: 10px;
+
+  /* colors */
+  --bg: #282c34;
+  --dark: #21252b;
+  --line: #323842;
+  --white: #d7dae0;
+  --light-gray: #b6b7c4;
+  --dark-gray: #6e7179;
+  --red: #e44d26;
+  --blue: #42a5f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: var(--xlarge);
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  text-wrap: nowrap;
+  color: white;
+  font-size: var(--small);
+  margin-left: 15px;
 }
 
 body {
   margin: 0 auto;
   width: 100%;
   font-family: "Noto Sans KR", sans-serif;
-  background-image: url("https://source.unsplash.com/user/w00dstock/likes");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  color: white;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--bg);
+  color: var(--white);
+  width: 100%;
   height: 100vh;
-}
-
-.main-container .main-wrapper {
-  text-align: center;
-  position: fixed;
-}
-
-.main-wrapper .date {
-  font-size: var(--large);
-}
-
-.main-wrapper .time {
-  font-size: var(--xlarge);
-  font-weight: 400;
-  margin-top: -35px;
-}
-
-.main-wrapper .search {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
-.search #search-input {
+main {
+  background-color: var(--dark);
+  padding: 30px;
+  border-radius: 15px;
   width: 600px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
   font-size: var(--medium);
-  padding: 15px;
-  border-radius: 30px;
-  border: 0;
-  text-align: center;
-  margin-top: -10px;
-}
-.search #search-input:focus {
-  background-color: rgba(0, 0, 0, 0.6);
+  margin: 60px 0;
 }
 
-.search #search-input::placeholder {
-  color: rgb(169, 169, 169);
-  font-size: var(--medium);
-}
-
-.quote {
-  font-size: var(--small);
-  position: fixed;
-  bottom: 0;
-  max-width: 800px;
-  padding: 0 10px;
-  margin-bottom: 20px;
-  font-weight: 300;
-  text-align: center;
-}
-
-.bookmark-open {
-  width: 240px;
-  padding: 15px 30px;
-  font-size: var(--xsmall);
-  height: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
+.todo-input-form {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.bookmark-close {
-  width: 240px;
-  padding: 15px 30px;
-  font-size: var(--xsmall);
-  height: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  justify-content: flex-end;
-  color: white;
-}
-
-.bookmark-open div {
-  cursor: pointer;
-}
-
-.bookmark-close div {
-  cursor: pointer;
-}
-
-.bookmark-bar {
-  width: 240px;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 50px;
-  right: 0;
-  min-height: calc(100vh - 70px);
-  padding: 10px 30px;
-  color: white;
-}
-
-.bookmark-item-add-btn {
-  padding: 10px;
-  font-size: var(--small);
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: rgba(241, 241, 241, 0.2) 0.5px solid;
-  margin-bottom: 35px;
-  margin-top: 10px;
-}
-.bookmark-item-add-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.bookmark-item-input-form {
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 12px;
-  margin: 20px 0;
-}
-.bookmark-item-input-form .bookmark-input {
-  margin-bottom: 12px;
-}
-.bookmark-item-input-form .bookmark-input .label {
-  margin-bottom: 3px;
-  font-size: var(--xsmall);
-}
-.bookmark-item-input-form .bookmark-input input {
-  width: 200px;
-  height: 20px;
-  border-radius: 5px;
-  margin: 5px;
-  background-color: transparent;
-  border: rgba(241, 241, 241, 0.2) 1px solid;
-  color: white;
-}
-.bookmark-item-input-form .bookmark-input input:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.bookmark-item-input-btn {
-  display: flex;
-  justify-content: space-between;
-  font-size: var(--xsmall);
-  margin-top: 5px;
-}
-.bookmark-item-input-btn div {
-  padding: 5px 35px;
-  border-radius: 5px;
-  border: rgba(241, 241, 241, 0.2) 0.5px solid;
-  cursor: pointer;
-}
-.bookmark-item-input-btn div:hover {
-  background-color: rgba(241, 241, 241, 0.2);
-}
-
-.bookmark-list a {
-  color: white;
-  display: flex;
-  text-decoration: none;
-}
-
-.bookmark-list .url-icon {
-  margin-right: 8px;
-}
-
-.url-icon img {
-  vertical-align: middle;
-}
-
-.bookmark-list .bookmark-item {
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: rgba(241, 241, 241, 0.2) 0.5px solid;
-  font-size: var(--small);
-  padding: 15px;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+.todo-input-form .todo-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--line);
+  background-color: transparent;
+  border-radius: 5px;
+  color: white;
+  font-size: var(--medium);
+}
+.todo-input-form input:focus {
+  background-color: var(--bg);
 }
 
-.bookmark-item .del-btn {
-  color: lightgray;
-  font-size: var(--xxsmall);
-  cursor: pointer;
+.todo-input-form .add-btn {
+  background-color: var(--blue);
+}
+
+.todo-list-item {
+  display: flex;
+  margin-top: 15px;
+}
+
+.todo-list-item .todo {
+  width: 100%;
+  background-color: var(--bg);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.todo-list-item .complete-btn {
+  background-color: var(--red);
 }
