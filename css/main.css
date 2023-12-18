@@ -98,10 +98,10 @@ main {
   border-radius: 5px;
 }
 
-.todo-list-item .edit-btn {
+.todo-list-item .complete-btn {
   background-color: var(--dark-gray);
 }
 
-.todo-list-item .complete-btn {
+.todo-list-item .delete-btn {
   background-color: var(--red);
 }
