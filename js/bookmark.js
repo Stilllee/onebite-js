@@ -33,6 +33,8 @@
     isAddBtnClick
       ? (newBookmarkForm.style.display = "block")
       : (newBookmarkForm.style.display = "none");
+    document.getElementById("new-bookmark-name-input").value = "";
+    document.getElementById("new-bookmark-url-input").value = "";
   };
 
   const deleteBookmarkItem = (id) => {
