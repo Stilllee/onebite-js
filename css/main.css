@@ -102,7 +102,7 @@ body {
   right: 0;
   display: flex;
   justify-content: flex-end;
-  color: black;
+  color: white;
 }
 
 .bookmark-open div {
