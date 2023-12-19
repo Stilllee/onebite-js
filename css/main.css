@@ -97,7 +97,18 @@ main {
   padding: 15px;
   border-radius: 5px;
 }
+.todo-list-item .todo:hover {
+  cursor: pointer;
+}
 
 .todo-list-item .delete-btn {
   background-color: var(--red);
+}
+
+.todo-edit-input {
+  background-color: transparent;
+  color: white;
+  font-size: var(--medium);
+  border: none;
+  outline: none;
 }

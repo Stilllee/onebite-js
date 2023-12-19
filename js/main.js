@@ -65,6 +65,52 @@ const setTodoListItem = (item, parentElement) => {
   todoDiv.classList.add("todo");
   todoDiv.textContent = todo;
 
+  todoDiv.addEventListener("click", function () {
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = todo;
+    input.classList.add("todo-edit-input");
+
+    input.addEventListener("blur", function () {
+      todoDiv.textContent = this.value;
+      updateTodoText(date, this.value);
+    });
+
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        todoDiv.textContent = this.value;
+        updateTodoText(date, this.value);
+        todoDiv.textContent = this.value;
+        todoDiv.appendChild(completeBtn);
+        todoDiv.appendChild(deleteBtn);
+      }
+    });
+
+    todoDiv.textContent = "";
+    todoDiv.appendChild(input);
+    input.focus();
+  });
+
+  // 할 일 수정
+  const updateTodoText = (date, newText) => {
+    const todoIndex = todoList.findIndex((item) => item.date === date);
+
+    if (todoIndex >= 0) {
+      todoList[todoIndex].todo = newText;
+    } else {
+      const completedIndex = completedList.findIndex(
+        (item) => item.date === date
+      );
+      if (completedIndex >= 0) {
+        completedList[completedIndex].todo = newText;
+      }
+    }
+
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+    localStorage.setItem("completedList", JSON.stringify(completedList));
+    renderToDoList();
+  };
+
   const completeBtn = document.createElement("button");
   completeBtn.classList.add("complete-btn");
   completeBtn.textContent = completed ? "취소" : "완료";
