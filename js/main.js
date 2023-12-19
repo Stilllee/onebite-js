@@ -47,4 +47,13 @@ const setTodoListItem = (todoText, date) => {
   todoList.appendChild(todoItem);
 };
 
+const renderToDoList = () => {
+  const storedTodoList = JSON.parse(localStorage.getItem("todoList")) || [];
+  storedTodoList.forEach((item) => {
+    setTodoListItem(item.todo, item.date);
+  });
+};
+
 addBtn.addEventListener("click", addTodoListItem);
+
+renderToDoList();
