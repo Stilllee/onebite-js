@@ -48,5 +48,3 @@ const setTodoListItem = (todoText, date) => {
 };
 
 addBtn.addEventListener("click", addTodoListItem);
-
-document.addEventListener("DOMContentLoaded", renderTodoList);
