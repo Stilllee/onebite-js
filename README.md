@@ -2,7 +2,7 @@
 
 ![image](https://github.com/Stilllee/onebite-js/assets/108785772/ed574bf7-5000-4898-8e2a-9f81e926da3a)
 
-자바스크립트를 이용해 개발한 **To Do List**입니다.
+자바스크립트를 이용해 개발한 [To Do List](https://woodstock-todo-list.netlify.app/)입니다.
 
 ## 주요 기능
 ### 1. 할 일추가하기
